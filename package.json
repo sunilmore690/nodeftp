@@ -1,0 +1,30 @@
+{
+  "name": "nodeftp",
+  "version": "1.0.0",
+  "description": "Easy ftp client for nodejs with advance feature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunilmore690/nodeftp.git"
+  },
+  "keywords": [
+    "node",
+    "ftp",
+    "client",
+    "ftp",
+    "ftp",
+    "client"
+  ],
+  "author": "Sunil More",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunilmore690/nodeftp/issues"
+  },
+  "homepage": "https://github.com/sunilmore690/nodeftp#readme",
+  "dependencies": {
+    "ftp": "^0.3.10"
+  }
+}
