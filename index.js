@@ -1,8 +1,10 @@
 const FtpClient = require('ftp'),
     fs = require('fs'),
-    os = require('os')
-class MyFtp {
+    os = require('os'),
+    EventEmitter= require('events');
+class MyFtp extends EventEmitter{
     constructor(options) {
+        super();
         let self = this;
         this.ftp = new FtpClient(options);
         this.isReady = false;
