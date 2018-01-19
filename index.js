@@ -59,7 +59,7 @@ class MyFtp extends EventEmitter{
             self.ftp.end();
         });
     }
-    rename() {
+    rename(source,destination,cb) {
         if (typeof cb != 'function') cb = this.myFunction;
         let self = this;
         this.ftp.rename(source, destination, function (err, list) {
@@ -68,7 +68,7 @@ class MyFtp extends EventEmitter{
             self.ftp.end();
         });
     }
-    rmdir(path, recursive) {
+    rmdir(path, recursive,cb) {
         if (typeof cb != 'function') cb = this.myFunction;
         let self = this;
         recursive = recursive || false;
@@ -78,7 +78,7 @@ class MyFtp extends EventEmitter{
             self.ftp.end();
         });
     }
-    delete(path) {
+    delete(path,cb) {
         if (typeof cb != 'function') cb = this.myFunction;
         let self = this;
         recursive = recursive || false;
