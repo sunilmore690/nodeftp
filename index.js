@@ -26,13 +26,13 @@ class MyFtp extends EventEmitter{
             self.ftp.end();
         });
     }
-    ls(cb){
-        this.list(cb)
+    ls(path,cb){
+        this.list(path,cb)
     }
-    list(cb) {
+    list(path,cb) {
         if (typeof cb != 'function') cb = this.myFunction;
         let self = this;
-        this.ftp.list(function (err, list) {
+        this.ftp.list(path|| '/',function (err, list) {
             if (err) throw err
             cb(null, list)
             self.ftp.end();
